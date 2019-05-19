@@ -1,5 +1,6 @@
 const fetch = require('node-fetch');
 const {JSDOM} = require('jsdom');
+const {BASE_URL} = require('./const');
 
 module.exports.fetchPage = async (url)=>{
   const options = {
@@ -48,4 +49,8 @@ module.exports.formatNews = ({title, description, contents, image})=>{
     image: image === null ? '' : image.getAttribute('src'),
     fullContent
   };
+}
+
+module.exports.getNextLink = (node)=>{
+  return node.getAttribute('href').replace(BASE_URL, '');
 }

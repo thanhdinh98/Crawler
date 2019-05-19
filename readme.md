@@ -11,8 +11,14 @@ Trương trình giúp cho việc lấy dữ liệu theo danh mục trên trang v
 ### Ví dụ
 
 ```
-npm run vnexpress the-thao
+npm run vnexpress <category> <pages>
+
+Example: npm run vnexpress the-thao 3
 ```
+
+Options:
+- category: thể loại tin tức cần crawl.
+- pages: số trang cần crawl.
 
 ### Cài đặt
 
